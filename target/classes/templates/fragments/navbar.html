@@ -1,0 +1,75 @@
+<th:block th:fragment>
+    <th:block sec:authorize="isAnonymous()">
+        <div class="container-fluid filmpanda-dark">
+            <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar filmpanda-dark">
+                <a class="navbar-brand text-white filmpanda-navbar-logo" th:href="@{/}">FilmPanda</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#guestNavBar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="guestNavBar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" th:href="@{/users/login}">Login</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" th:href="@{/users/register}">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+    </th:block>
+    <th:block sec:authorize="isAuthenticated()">
+        <div class="container-fluid filmpanda-dark">
+            <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar filmpanda-dark">
+                <a class="navbar-brand text-white filmpanda-navbar-logo" th:href="@{/home}">FilmPanda</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#userNavBar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="userNavBar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" th:href="@{/articles/list}">Articles</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" th:href="@{/movies/list}">Movies</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" th:href="@{/movie-theaters/list}">Movie Theaters</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <th:block sec:authorize="hasRole('ROLE_ADMIN')">
+                            <li class="nav-item active">
+                                <div class="dropdown">
+                                    <a class="nav-link active dropdown-toggle" href="#" role="button" id="adminDropdown"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Admin
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="adminDropdown">
+                                        <a class="dropdown-item" th:href="@{/users/all}">All Users</a>
+                                        <a class="dropdown-item" th:href="@{/articles/all}">All Articles</a>
+                                        <a class="dropdown-item" th:href="@{/movies/all}">All Movies</a>
+                                        <a class="dropdown-item" th:href="@{/genres/all}">All Genres</a>
+                                        <a class="dropdown-item" th:href="@{/movie-theaters/all}">All Movie Theaters</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </th:block>
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" th:href="@{/users/profile}">Profile</a>
+                        </li>
+                        <li>
+                            <form action="/logout?login" method="post">
+                                <input type="hidden" name="_csrf"
+                                       value="80417983-fe8b-45c7-963e-31f6915a1560">
+                                <button class="nav-link logout-button">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+            </header>
+        </div>
+    </th:block>
+</th:block>

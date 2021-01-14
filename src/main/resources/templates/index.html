@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+</head>
+<body>
+<th:block th:include="~{fragments/navbar}"></th:block>
+<main>
+    <div class="jumbotron-fluid filmpanda-dark filmpanda-main-block">
+        <div class="filmpanda-welcome">Welcome to FilmPanda</div>
+        <div class="filmpanda-small-text-center">the go-to website for any moviegoer in Sofia</div>
+        <hr/>
+        <p class="text-center">To access all our features, you must <a class="filmpanda-orange-text" th:href="@{/users/login}">login</a>.</p>
+        <p class="text-center">Don't have an account? <a class="filmpanda-orange-text" th:href="@{/users/register}">Register</a> now!</p>
+        <div class="text-center">
+            <img width="30%" src="/filmpanda-img/logo.png" alt="filmpanda">
+        </div>
+        <hr>
+    </div>
+</main>
+<th:block th:include="~{fragments/footer}"></th:block>
+</body>
+</html>

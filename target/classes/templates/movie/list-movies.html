@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+</head>
+<body>
+<th:block th:include="~{fragments/navbar}"></th:block>
+<main>
+    <div class="jumbotron-fluid filmpanda-dark filmpanda-main-block">
+        <hr>
+        <h1 class="text-center filmpanda-orange-text">Movie List</h1>
+        <br>
+        <th:block th:if="${movies.size() == 0}">
+            <h2 class="text-center">There are currently no movies!</h2>
+        </th:block>
+        <th:block th:each="movie : ${movies}">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="jumbotron-fluid filmpanda-entity-block">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a th:href="@{/movies/details/{id} (id = ${movie.id})}"><img class="push-up" th:src="${movie.imageUrl}" width="70%" alt="Movie Poster" align="left"></a>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="jumbotron-fluid">
+                                        <div class="row">
+                                            <a th:href="@{/movies/details/{id} (id = ${movie.id})}"><h2 class="filmpanda-orange-text" th:utext="${movie.title}"></h2></a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="filmpanda-small-text filmpanda-orange-text">Genres: </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="filmpanda-small-text" th:utext="${#strings.listJoin(movie.genres, ', ')}"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="filmpanda-small-text filmpanda-orange-text">Runtime: </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="filmpanda-small-text" th:utext="${movie.runtime}"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="filmpanda-list-text" th:utext="${movie.description}"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </th:block>
+        <hr>
+    </div>
+</main>
+<th:block th:include="~{fragments/footer}"></th:block>
+</body>
+</html>

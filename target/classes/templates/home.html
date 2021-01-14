@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+</head>
+<body>
+<th:block th:include="~{fragments/navbar}"></th:block>
+<main>
+    <div class="jumbotron filmpanda-dark filmpanda-main-block">
+        <div class="filmpanda-welcome"> Hello, <th:block th:utext="${currentUser}" />! </div>
+        <div class="text-center">
+            <img width="30%" src="/filmpanda-img/logo.png" alt="filmpanda">
+        </div>
+    </div>
+</main>
+<th:block th:include="~{fragments/footer}"></th:block>
+</body>
+</html>

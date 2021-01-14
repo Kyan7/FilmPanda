@@ -1,0 +1,177 @@
+.filmpanda-dark {
+    background-color: #081241;
+    color: white;
+}
+
+.filmpanda-review-post-block {
+    background-color: #1410a3;
+    padding: 2%;
+    margin: 3%;
+}
+
+.filmpanda-review-block {
+    background-color: #120456;
+    padding: 2%;
+    margin: 3%;
+}
+
+.filmpanda-current-user-review-block {
+    background-color: #4223db;
+    padding: 2%;
+    margin: 3%;
+}
+
+.filmpanda-entity-block {
+    background-color: black;
+    padding: 1%;
+    margin: 1%;
+    width: 100%;
+}
+
+.filmpanda-screening-theater-block {
+    background-color: black;
+    padding: 1%;
+    margin: 2%;
+}
+
+
+.filmpanda-screening-price-block {
+    background-color: darkslategrey;
+    padding: 2%;
+    margin: 4%;
+    width: 100%;
+}
+
+.filmpanda-screening-block {
+    background-color: #120456;
+    padding: 1%;
+    margin: 2%;
+    width: 100%;
+}
+
+.filmpanda-orange-text {
+    color: #d39e00;
+}
+
+.filmpanda-dark-text-important {
+    color: #081241 !important;
+}
+
+.filmpanda-small-block {
+    margin: 30px 37%;
+}
+
+.filmpanda-navbar-logo {
+    font-family: Broadway;
+    font-size: 40px;
+}
+
+.filmpanda-welcome {
+    font-family: Broadway;
+    font-size: 50px;
+    text-align: center;
+}
+
+.filmpanda-title-text {
+    font-size: 40px;
+    text-align: center;
+}
+
+.filmpanda-main-block {
+    margin: 30px 23%;
+    justify-content: center;
+}
+
+.filmpanda-list-block {
+    margin: 30px 10%;
+}
+
+.filmpanda-article-content {
+    font-size: 24px;
+    text-align: justify;
+}
+
+
+.filmpanda-small-text-center {
+    font-family: Broadway;
+    font-size: 15px;
+    text-align: center;
+}
+
+.filmpanda-small-text {
+    font-size:15px;
+    text-align: left;
+}
+
+.filmpanda-tiny-text {
+    font-size: 11px;
+    text-align: left;
+}
+
+.filmpanda-medium-small-text {
+    font-size: 24px;
+    text-align: left;
+}
+
+.filmpanda-list-text {
+    font-size: 20px;
+    text-align: left;
+}
+
+.logout-button {
+    background: transparent;
+    border: none;
+    color: white !important;
+}
+
+.filmpanda-grey-bg {
+    background-color: grey !important;
+}
+
+.filmpanda-button {
+    background-color: #d39e00;
+    border: #d39e00;
+    color: #081241;
+}
+
+.filmpanda-remove-button {
+    background-color: red;
+    border: red;
+    color: #081241;
+}
+
+.filmpanda-tiny-remove-button {
+    background-color: red;
+    border: red;
+    color: #081241;
+    font-size: 11px;
+}
+
+.central {
+    margin: 0 auto !important;
+}
+
+.push-up {
+    margin-bottom: 5px;
+}
+
+.push-down {
+    margin-top: 5px;
+}
+
+.push-left {
+    margin-right: 5px;
+}
+
+.push-right {
+    margin-left: 5px;
+}
+
+.row-margin {
+    margin-bottom: 1rem;
+}
+
+.tiny-margin-top-bottom {
+    margin-top: 1px !important;
+    margin-bottom: 2px !important;
+}
